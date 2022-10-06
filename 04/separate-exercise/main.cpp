@@ -1,7 +1,5 @@
-#include "animal.hpp"
 #include "dog.hpp"
 #include <iostream>
-#include <cmath>
 
 void petLots(const animal & a)
 {
@@ -14,6 +12,5 @@ void petLots(const animal & a)
 
 int main() {
     dog d {"Rover"};
-
     petLots(d);
 }

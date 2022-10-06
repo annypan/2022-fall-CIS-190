@@ -1,6 +1,5 @@
 #include "dog.hpp"
-#include "animal.hpp"
-using std::istream, std::ostream, std::string;
+#include <iostream>
 
 dog::dog(string name) : animal {name}
 {}
