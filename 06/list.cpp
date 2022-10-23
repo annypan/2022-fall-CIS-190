@@ -20,6 +20,8 @@ public:
 
     // the implicitly defined move ctor moves every member, which is what we want
     list(list && other) = default;
+    // list(list && other): val {other.val}, next {move(other.next)}
+    // {}
 
     list & operator=(const list & other)
     {
@@ -40,8 +42,15 @@ public:
     }
 
     // same as the move ctor, the implicit one is what we want
-    list & operator=(list && other) = default;
-
+    // list & operator=(list && other) = default;
+    // list & operator=(list && other)
+    // {
+    //     if (this == &other) {return *this;}
+    //     val = other.val;
+    //     next.reset(other.next);
+    //     other.next.reset();
+    //     return *this;
+    // }
     void print() const
     {
         std::cout << val << " ";
